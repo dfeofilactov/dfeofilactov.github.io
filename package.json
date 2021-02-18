@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "webpack s -c webpack/webpack.js",
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "build": "webpack -c webpack/webpack.js",
+    "start": "snowpack dev"
   },
   "keywords": [],
   "author": "",
