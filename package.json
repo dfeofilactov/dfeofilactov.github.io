@@ -12,9 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@testing-library/react": "^11.2.5",
     "@types/classnames": "^2.2.11",
+    "@types/lodash": "^4.14.168",
     "classnames": "^2.2.6",
+    "firebase": "^8.2.8",
     "framer-motion": "^3.5.2",
+    "lodash": "^4.17.20",
     "prettier": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

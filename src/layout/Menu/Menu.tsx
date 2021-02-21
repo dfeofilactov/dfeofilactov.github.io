@@ -4,10 +4,17 @@ import { motion } from 'framer-motion';
 
 import { menuDescription } from '~/core/meta';
 import { MenuItem } from '~/core/models';
+import useButtonClicks from '~/shared/hooks/useButtonClicks';
 import './Menu.scss';
 
 const Menu: React.FC = () => {
-  const [clicked, setClicked] = useState(0);
+  const [clicked, setClicked] = useState(false);
+  const [clicksCount, setClicksCount] = useButtonClicks();
+
+  const handleClick = () => {
+    setClicked(true);
+    setClicksCount((count) => count + 1);
+  };
 
   return (
     <menu>
@@ -28,11 +35,11 @@ const Menu: React.FC = () => {
         animate={{ opacity: 1, x: 0 }}
         className="controls"
       >
-        <button onClick={() => setClicked((click) => ++click)}>Button</button>
-        {!!clicked && (
+        <button onClick={handleClick}>Button</button>
+        {clicked && (
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
             <p className="info">
-              This button was clicked <span className="info-count">{clicked}</span> times
+              This button was clicked <span className="info-count">{clicksCount}</span> times
             </p>
             <p>Why this button exists?</p>
             <input />
