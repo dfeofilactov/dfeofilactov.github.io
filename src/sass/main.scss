@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Courier Prime', monospace;
-  @include theme('background');
+  @include theme('background', 'background', 100);
   @include theme('color');
   #root {
     display: flex;

@@ -9,7 +9,7 @@ const ThemeSwitcher: React.FC = () => {
 
   useEffect(() => {
     document.documentElement.className = '';
-    document.documentElement.classList.add(`theme-${preferences.theme}`);
+    document.documentElement.classList.add(preferences.theme);
   }, [preferences.theme]);
 
   const handleSwitch = (theme: Theme) => {

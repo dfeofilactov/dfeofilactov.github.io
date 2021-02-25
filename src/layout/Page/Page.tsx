@@ -5,7 +5,7 @@ import './Page.scss';
 
 interface Props {
   className: string;
-  title: string;
+  title?: string;
 }
 
 const Page: React.FC<Props> = ({ children, className, title }) => {
@@ -15,7 +15,7 @@ const Page: React.FC<Props> = ({ children, className, title }) => {
       animate={{ opacity: 1, x: 0 }}
       className={classnames('page', className)}
     >
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
