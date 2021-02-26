@@ -1,5 +1,44 @@
 @use '~/sass/colors' as *;
 
+.family-name {
+  font-weight: 100;
+  opacity: 0.2;
+}
+
+.light .family-name {
+  opacity: 0.5;
+}
+
+.role {
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  @include theme(color, primary);
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    margin-left: 10px;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s ease;
+    content: '';
+  }
+}
+
+.menu-link.active {
+  &:after {
+    border-color: green;
+    animation: blame 1.5s ease infinite;
+  }
+}
+
 menu {
   display: flex;
   flex-direction: column;
@@ -12,7 +51,7 @@ menu {
 
   h1 {
     margin: 0;
-    text-transform: uppercase;
+    font-weight: 900;
   }
 
   ol {
@@ -73,4 +112,11 @@ menu {
       outline: none;
     }
   }
+}
+
+@keyframes blame {
+  0% { opacity: 0;}
+  20% { opacity: 1;}
+  80% { opacity: 1;}
+  100% { opacity: 0;}
 }

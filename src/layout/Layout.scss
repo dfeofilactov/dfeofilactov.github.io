@@ -37,8 +37,8 @@ img {
   width: 300%;
   height: 300%;
   background-image: url("./assets/paper.jpg");
-  opacity: 0.4;
-  animation: grain 8s steps(10) infinite;
+  opacity: 0.6;
+  animation: grain 10s steps(10) infinite;
   content: "";
 }
 
@@ -53,13 +53,6 @@ img {
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  // background: rgba(#000, 0.5);
-  // backdrop-filter: blur(30px);
-}
-
-.light .glass {
-  // background: rgba(#fff, 0);
-  // backdrop-filter: blur(10px);
 }
 
 svg {
@@ -81,6 +74,6 @@ svg {
   50% { transform:translate(-15%, 10%) }
   60% { transform:translate(15%, 0%) }
   70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
+  80% { transform:translate(3%, -15%) }
   90% { transform:translate(-10%, 10%) }
 }

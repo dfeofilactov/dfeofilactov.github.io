@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { menuDescription } from '~/core/meta';
@@ -18,14 +18,17 @@ const Menu: React.FC = () => {
 
   return (
     <menu>
-      <h1>d.feofilactov</h1>
+      <h1>
+        Denis <span className="family-name">Feofilactov</span>
+      </h1>
+      <p className="role">React frontend developer</p>
       <ol>
         {menuDescription.map((item: MenuItem) => (
           <li key={item.id}>
-            <Link to={item.route}>
-              <span className="menu-item-prefix">menu $</span>
+            <NavLink exact className="menu-link" activeClassName="active" to={item.route}>
+              <span className="menu-item-prefix">menu ➭</span>
               {item.caption}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ol>
@@ -37,12 +40,16 @@ const Menu: React.FC = () => {
       >
         <button onClick={handleClick}>Button</button>
         {clicked && (
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'linear', duration: '0.1' }}
+          >
             <p className="info">
               This button was clicked <span className="info-count">{clicksCount}</span> times
             </p>
-            <p>Why this button exists?</p>
-            <input />
+            {/* <p>Why this button exists?</p>
+            <input /> */}
           </motion.div>
         )}
       </motion.div>
