@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import './Page.scss';
 
 interface Props {
-  className: string;
+  className?: string;
   title?: string;
 }
 
