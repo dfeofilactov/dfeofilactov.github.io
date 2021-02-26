@@ -394,6 +394,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/pages/ReactCart/ReactCart.tsx":
+/*!*******************************************!*\
+  !*** ./src/pages/ReactCart/ReactCart.tsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/layout */ \"./src/layout/index.ts\");\n\n\n\nvar ReactCart = function ReactCart() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_layout__WEBPACK_IMPORTED_MODULE_1__.Page, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: \"description\"\n  }, \"Reload this page.\"));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactCart);\n\n//# sourceURL=webpack://dfeofilactov/./src/pages/ReactCart/ReactCart.tsx?");
+
+/***/ }),
+
+/***/ "./src/pages/ReactCart/index.ts":
+/*!**************************************!*\
+  !*** ./src/pages/ReactCart/index.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* reexport safe */ _ReactCart__WEBPACK_IMPORTED_MODULE_0__.default)\n/* harmony export */ });\n/* harmony import */ var _ReactCart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ReactCart */ \"./src/pages/ReactCart/ReactCart.tsx\");\n\n\n//# sourceURL=webpack://dfeofilactov/./src/pages/ReactCart/index.ts?");
+
+/***/ }),
+
 /***/ "./src/pages/Routes.tsx":
 /*!******************************!*\
   !*** ./src/pages/Routes.tsx ***!
@@ -401,7 +423,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ \"./src/pages/Home/index.ts\");\n/* harmony import */ var _Portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Portfolio */ \"./src/pages/Portfolio/index.ts\");\n/* harmony import */ var _Links__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Links */ \"./src/pages/Links/index.ts\");\n/* harmony import */ var _Experience__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Experience */ \"./src/pages/Experience/index.ts\");\n\n\n\n\n\n\n\nvar Routes = function Routes() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    exact: true,\n    path: \"/\",\n    component: _Home__WEBPACK_IMPORTED_MODULE_1__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    exact: true,\n    path: \"/portfolio\",\n    component: _Portfolio__WEBPACK_IMPORTED_MODULE_2__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    exact: true,\n    path: \"/links\",\n    component: _Links__WEBPACK_IMPORTED_MODULE_3__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    exact: true,\n    path: \"/cv\",\n    component: _Experience__WEBPACK_IMPORTED_MODULE_4__.default\n  }));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Routes);\n\n//# sourceURL=webpack://dfeofilactov/./src/pages/Routes.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ \"./src/pages/Home/index.ts\");\n/* harmony import */ var _Portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Portfolio */ \"./src/pages/Portfolio/index.ts\");\n/* harmony import */ var _Links__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Links */ \"./src/pages/Links/index.ts\");\n/* harmony import */ var _Experience__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Experience */ \"./src/pages/Experience/index.ts\");\n/* harmony import */ var _ReactCart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ReactCart */ \"./src/pages/ReactCart/index.ts\");\n\n\n\n\n\n\n\n\nvar Routes = function Routes() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {\n    exact: true,\n    path: \"/\",\n    component: _Home__WEBPACK_IMPORTED_MODULE_1__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {\n    exact: true,\n    path: \"/portfolio\",\n    component: _Portfolio__WEBPACK_IMPORTED_MODULE_2__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {\n    exact: true,\n    path: \"/links\",\n    component: _Links__WEBPACK_IMPORTED_MODULE_3__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {\n    exact: true,\n    path: \"/cv\",\n    component: _Experience__WEBPACK_IMPORTED_MODULE_4__.default\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {\n    exact: true,\n    path: \"/react-cart\",\n    component: _ReactCart__WEBPACK_IMPORTED_MODULE_5__.default\n  }));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Routes);\n\n//# sourceURL=webpack://dfeofilactov/./src/pages/Routes.tsx?");
 
 /***/ }),
 
@@ -1185,7 +1207,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("33d1987b364885ebf982")
+/******/ 		__webpack_require__.h = () => ("5eb5c8d7b56e7dad7a51")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
