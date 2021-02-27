@@ -29,8 +29,15 @@ const LavaSvg: React.FC = () => {
           <stop offset="0.7828" style={{ stopColor: '#5FE06F05' }} />
           <stop offset="0.9847" style={{ stopColor: '#5FE06F00' }} />
         </radialGradient>
+        <radialGradient id="bgGradMobile" cx="300" cy="300" r="100" gradientUnits="userSpaceOnUse">
+          <stop offset="7.142857e-002" style={{ stopColor: '#5FE06F30' }} />
+          <stop offset="0.3107" style={{ stopColor: '#5FE06F20' }} />
+          <stop offset="0.553" style={{ stopColor: '#5FE06F10' }} />
+          <stop offset="0.7828" style={{ stopColor: '#5FE06F05' }} />
+          <stop offset="0.9847" style={{ stopColor: '#5FE06F00' }} />
+        </radialGradient>
       </defs>
-      <rect fill="url(#bgGrad)" width="600" height="600" />
+      <rect id="bg-rect" fill="url(#bgGrad)" width="600" height="600" />
 
       <g className="blobGroup" filter="url(#goo)" clipPath="url(#glassMask)">
         <path

@@ -1,6 +1,8 @@
 @use '~/sass/colors' as *;
+@use '~/sass/config' as *;
 
 .family-name {
+  z-index: -1;
   font-weight: 100;
   opacity: 0.2;
 }
@@ -10,6 +12,7 @@
 }
 
 .role {
+  z-index: -1;
   margin: 5px 0;
   font-weight: 500;
   font-size: 12px;
@@ -44,10 +47,16 @@ menu {
   flex-direction: column;
   flex-grow: 1;
   box-sizing: border-box;
-  width: 50%;
+  width: 100%;
   margin: 0;
-  padding-top: 100px;
-  padding-left: 100px;
+  padding-top: 80px;
+  padding-left: 40px;
+
+  @include desktop {
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 100px;
+  }
 
   h1 {
     margin: 0;

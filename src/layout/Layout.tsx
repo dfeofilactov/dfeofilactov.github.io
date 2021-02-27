@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import Menu from '~/layout/Menu';
+import LavaSvg from '~/layout/assets/lava';
 import ThemeSwitcher from '~/shared/components/ThemeSwitcher';
 import lavaAnimation from '~/layout/lavaAnimation';
 import './Layout.scss';
-import LavaSvg from '~/layout/assets/lava';
 
 const Layout: React.FC = ({ children }) => {
   useEffect(() => {
@@ -15,10 +15,13 @@ const Layout: React.FC = ({ children }) => {
       <Menu />
       <main>{children}</main>
       <ThemeSwitcher />
-      <div className="effect" />
+      <div className="effect-wrapper">
+        <div className="effect" />
+      </div>
       <div className="glass" />
-      <LavaSvg />
-      {/* <ReactSVG src={lava} /> */}
+      <div className="svg-wrapper">
+        <LavaSvg />
+      </div>
     </div>
   );
 };
