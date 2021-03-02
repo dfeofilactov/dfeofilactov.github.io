@@ -22,7 +22,7 @@ const LavaSvg: React.FC = () => {
 	C227.6,352.9,262,174,262,174z"
           />
         </clipPath>
-        <radialGradient id="bgGrad" cx="300" cy="300" r="200" gradientUnits="userSpaceOnUse">
+        <radialGradient id="bgGrad" cx="300" cy="300" r="400" gradientUnits="userSpaceOnUse">
           <stop offset="7.142857e-002" style={{ stopColor: '#5FE06F30' }} />
           <stop offset="0.3107" style={{ stopColor: '#5FE06F20' }} />
           <stop offset="0.553" style={{ stopColor: '#5FE06F10' }} />

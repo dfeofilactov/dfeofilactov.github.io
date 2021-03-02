@@ -42,7 +42,7 @@ img {
     height: 100vh;
 
     @include desktop {
-      background-image: url("./assets/texture.jpg");
+      // background-image: url("./assets/texture.jpg");
     }
   }
   
@@ -58,11 +58,11 @@ img {
     animation: grain 10s steps(10) infinite;
     content: "";
   }
-  
-  .light .effect:after {
-    background-image: url("./assets/paper-light.png");
-    opacity: 0.2;
-  }
+}
+
+.light .effect:after {
+  background-image: url("./assets/paper-light.png");
+  opacity: 0.2;
 }
 
 .glass {
@@ -74,9 +74,14 @@ img {
   background-color: rgba(#000, 0.4);
   backdrop-filter: blur(40px);
 
-  @include desktop {
+  @include tablet {
+    background-color: transparent;
     backdrop-filter: none;
   }
+}
+
+.light .glass {
+  background-color: rgba(#fff, 0.4);
 }
 
 .svg-wrapper {
@@ -99,11 +104,15 @@ img {
       fill: url('#bgGradMobile');
     }
     
-    @include desktop {
+    @include tablet {
       top: 0;
       right: 0;
-      transform: scale(4);
+      transform: translateX(0px) scale(4);
       fill: url('#bgGrad');
+    }
+
+    @include desktop {
+      transform: translateX(-200px) scale(4);
     }
   }
 }
