@@ -6,14 +6,15 @@ import './Page.scss';
 interface Props {
   className?: string;
   title?: string;
+  transparent?: boolean;
 }
 
-const Page: React.FC<Props> = ({ children, className, title }) => {
+const Page: React.FC<Props> = ({ children, className, title, transparent }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
-      className={classnames('page', className)}
+      className={classnames('page', className, { transparent })}
     >
       {title && <h2>{title}</h2>}
       <motion.div

@@ -1,0 +1,14 @@
+@use '~/sass/colors' as *;
+
+.experience {
+  display: flex;
+  @include theme(background);
+}
+
+.cv-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+}

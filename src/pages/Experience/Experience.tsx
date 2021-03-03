@@ -1,10 +1,14 @@
 import React from 'react';
+import { AboutMe } from './components';
 import { Page } from '~/layout';
+import './Experience.scss';
 
 const Experience: React.FC = () => {
   return (
     <Page title="Experience" className="experience">
-      <p className="description">Experience content.</p>
+      <div className="cv-wrapper">
+        <AboutMe />
+      </div>
     </Page>
   );
 };
