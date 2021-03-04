@@ -2,8 +2,14 @@
 
 .layout {
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  overflow: hidden;
+  overflow-Y: auto;
+
+  @include tablet {
+    flex-direction: row;
+    overflow: hidden;
+  }
 }
 
 main {
@@ -14,11 +20,13 @@ main {
   align-items: flex-start;
   justify-content: center;
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
   height: 100%;
+  margin-top: 40px;
 
-  @include desktop {
-    width: 50%;
+  @include tablet {
+    width: 80%;
+    margin-top: 0px;
   }
 }
 

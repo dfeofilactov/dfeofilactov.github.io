@@ -1,8 +1,13 @@
 import React from 'react';
+import { Card } from '~/shared/components';
 import './AboutMe.scss';
 
 const AboutMe: React.FC = () => {
-  return <div className="about-me">AboutMe</div>;
+  return (
+    <Card className="about-me">
+      <Card.Title>About me</Card.Title>
+    </Card>
+  );
 };
 
 export default AboutMe;

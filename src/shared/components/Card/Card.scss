@@ -1,0 +1,21 @@
+@use '~/sass/config' as *;
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.label {
+  font-size: 12px;
+}
+
+.label.uppercase {
+  text-transform: uppercase;
+}

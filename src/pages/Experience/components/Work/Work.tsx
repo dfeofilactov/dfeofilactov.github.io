@@ -1,8 +1,13 @@
 import React from 'react';
+import { Card } from '~/shared/components';
 import './Work.scss';
 
 const Work: React.FC = () => {
-  return <div className="work">Work</div>;
+  return (
+    <Card className="work">
+      <Card.Title>Work</Card.Title>
+    </Card>
+  );
 };
 
 export default Work;

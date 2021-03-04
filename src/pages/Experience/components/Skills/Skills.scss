@@ -2,4 +2,37 @@
 
 .skills {
   display: flex;
+  color: #000;
+  @include theme(background, primary, 100);
 }
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1px 0;
+
+  .caption {
+    font-weight: 600;
+    font-size: 14px;
+  } 
+}
+
+.rating {
+  display: flex;
+
+  .point {
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    background-color: transparentize($color: #000, $amount: 0.8);
+    border-radius: 5px;
+
+    &.filled {
+      background-color: #000;
+    }
+  }
+}
+
