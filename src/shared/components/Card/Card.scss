@@ -12,10 +12,22 @@
   }
 }
 
-.label {
-  font-size: 12px;
+h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: 600;
 }
 
-.label.uppercase {
-  text-transform: uppercase;
+.label {
+  font-weight: 400;
+  font-size: 16px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.bold {
+    font-weight: 600;
+  }
 }

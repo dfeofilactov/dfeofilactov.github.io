@@ -1,5 +1,4 @@
 import React from 'react';
-import './Title.scss';
 
 export interface TitleProps {
   className?: string;

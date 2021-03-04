@@ -8,8 +8,8 @@ const Experience: React.FC = () => {
     <Page title="Experience" className="experience">
       <div className="cv-wrapper">
         <Profile />
-        <Skills />
         <Work />
+        <Skills />
         <AboutMe />
       </div>
     </Page>
