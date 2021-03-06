@@ -8,9 +8,13 @@ const Experience: React.FC = () => {
     <Page title="Experience" className="experience">
       <div className="cv-wrapper">
         <Profile />
-        <Work />
-        <Skills />
-        <AboutMe />
+        <div className="column left">
+          <Work />
+        </div>
+        <div className="column right">
+          <Skills />
+          <AboutMe />
+        </div>
       </div>
     </Page>
   );

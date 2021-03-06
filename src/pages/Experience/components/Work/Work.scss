@@ -2,5 +2,59 @@
 
 .work {
   display: flex;
+  width: 100%;
   padding: 0;
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.work-item {
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 0 30px #00000020;
+  @include theme(background, background, 100);
+
+  .position {
+    text-transform: uppercase;
+  }
+
+  .work-info {
+    margin-bottom: 10px;
+
+    .company {
+      text-transform: uppercase;
+    }
+
+    .period {
+      font-weight: 100;
+    }
+  }
+
+  .work-projects {
+    .description {
+      font-weight: 700;
+    }
+
+    .responsibilities {
+      margin: 10px 0;
+      font-weight: 500;
+
+      li {
+        display: flex;
+        padding: 5px;
+      }
+
+      .point {
+        min-width: 10px;
+        height: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        @include theme(background, color)
+      }
+    }
+  }
 }

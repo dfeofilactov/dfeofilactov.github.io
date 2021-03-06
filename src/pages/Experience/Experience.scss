@@ -25,10 +25,33 @@
 }
 
 .cv-wrapper {
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  // gap: 40px;
   box-sizing: border-box;
   width: 100%;
+
+  .column {
+    width: 100%;
+    @include desktop {
+      box-sizing: border-box;
+      width: 50%;
+    }
+  }
+  
+  .column.left {
+    @include desktop {
+      padding: 20px 15px 20px 0;
+    }
+  }
+
+  .column.right {
+    @include desktop {
+      padding: 20px 0 20px 15px;
+    }
+  }
+
+  .column > div {
+    margin-bottom: 30px;
+  }
 }
