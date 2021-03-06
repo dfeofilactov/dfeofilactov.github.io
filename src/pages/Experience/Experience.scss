@@ -8,9 +8,9 @@
   padding-left: 20px;
   overflow: auto;
   font-family: 'Montserrat', serif;
-  background-color: #00000021;
+  background-color: #10101051;
   box-shadow: 0 0 50px #00000051;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(150px);
   // @include theme(background);
   @include tablet {
     padding-right: 60px;
