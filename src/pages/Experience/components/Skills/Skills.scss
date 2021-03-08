@@ -4,10 +4,9 @@
   display: flex;
   width: 100%;
   padding: 30px;
-  color: #fafafa;
-  background: #000;
   box-shadow: 0 0 20px #00000030;
-  // @include theme(background, background, 100);
+  @include theme(background, color);
+  @include theme(color, background);
 }
 
 .skill {
@@ -18,7 +17,6 @@
   margin: 1px 0;
 
   .caption {
-    color: #ccc;
     font-weight: 500;
     font-size: 14px;
   } 
@@ -32,11 +30,12 @@
     width: 10px;
     height: 10px;
     margin: 2px;
-    background-color: transparentize($color: #fff, $amount: 0.8);
     border-radius: 5px;
+    opacity: 0.2;
+    @include theme(background);
 
     &.filled {
-      background-color: #fff;
+      opacity: 1;
     }
   }
 }

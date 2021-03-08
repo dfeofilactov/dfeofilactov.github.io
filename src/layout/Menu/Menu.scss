@@ -80,14 +80,14 @@ menu {
   }
 
   li {
-    padding: 5px;
+    padding: 3px;
     text-transform: lowercase;
     list-style: none;
   }
 
   .menu-item-prefix {
     margin-right: 10px;
-    color: #505050;
+    opacity: 0.2;
   }
 
   .controls {
@@ -103,6 +103,10 @@ menu {
       border: none;
       outline: none;
       box-shadow: 5px 5px 0 0 white;
+
+      .light & {
+        box-shadow: 5px 5px 0 0 black;
+      }
     }
 
     .info {
