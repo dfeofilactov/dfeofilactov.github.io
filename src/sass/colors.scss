@@ -2,39 +2,45 @@ $themes: (
   light: (
     background: (
       100: #EFEFEF,
-      200: #FAFAFA,
+      500: #FAFAFA,
       300: #FFF,
     ),
     color: (
-      100: #212121,
-      200: #212121,
+      100: #111111,
+      500: #212121,
       300: #212121,
+    ),
+    card: (
+      200: #ffffff11,
     ),
     primary: (
       100: #4FD05F,
-      200: #5FE06F,
+      500: #5FE06F,
       300: #6FF07F,
     ),
   ),
   dark: (
     background: (
       100: #050505,
-      200: #151515,
+      500: #151515,
       300: #252525,
     ),
     color: (
-      100: #FAFAFA,
-      200: #FFF,
+      100: #BABABA,
+      500: #EAEAEA,
+    ),
+    card: (
+      500: #00000071,
     ),
     primary: (
       100: #4FD05F,
-      200: #5FE06F,
+      500: #5FE06F,
       300: #6FF07F,
     ),
   )
 );
 
-@mixin theme($key, $color: $key, $shade: 200) {
+@mixin theme($key, $color: $key, $shade: 500) {
   @each $theme-name, $theme-color in $themes {
     .#{$theme-name} & {
       #{$key}: map-get(map-get(map-get($themes, $theme-name), $color), $shade)

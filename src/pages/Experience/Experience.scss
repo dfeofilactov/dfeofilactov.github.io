@@ -1,0 +1,62 @@
+@use '~/sass/colors' as *;
+@use '~/sass/config' as *;
+
+.experience {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  overflow: auto;
+  font-family: 'Montserrat', serif;
+  background-color: #10101051;
+  box-shadow: 0 0 50px #00000051;
+  backdrop-filter: blur(150px);
+  @include theme(color);
+
+  @include tablet {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  p {
+    line-height: 22px;
+  }
+}
+
+.light .experience {
+  background-color: #ffffff51;
+  box-shadow: 0 0 50px #00000011;
+  backdrop-filter: blur(50px);
+}
+
+.cv-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 40px;
+  box-sizing: border-box;
+  width: 100%;
+
+  .column {
+    width: 100%;
+    @include desktop {
+      box-sizing: border-box;
+      width: 50%;
+    }
+  }
+  
+  .column.left {
+    @include desktop {
+      padding: 20px 15px 20px 0;
+    }
+  }
+
+  .column.right {
+    @include desktop {
+      padding: 20px 0 20px 15px;
+    }
+  }
+
+  .column > div {
+    margin-bottom: 30px;
+  }
+}

@@ -46,21 +46,30 @@ menu {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  align-items: flex-end;
   box-sizing: border-box;
-  width: 100%;
   margin: 0;
   padding-top: 80px;
+  padding-right: 40px;
   padding-left: 40px;
 
   @include desktop {
-    width: 50%;
+    align-items: flex-start;
+    width: 30%;
     padding-top: 100px;
+    padding-right: 100px;
     padding-left: 100px;
   }
 
   h1 {
     margin: 0;
     font-weight: 900;
+    line-height: 32px;
+    text-align: end;
+
+    @include desktop {
+      text-align: start;
+    }
   }
 
   ol {
@@ -71,14 +80,14 @@ menu {
   }
 
   li {
-    padding: 5px;
+    padding: 3px;
     text-transform: lowercase;
     list-style: none;
   }
 
   .menu-item-prefix {
     margin-right: 10px;
-    color: #505050;
+    opacity: 0.2;
   }
 
   .controls {
@@ -94,6 +103,10 @@ menu {
       border: none;
       outline: none;
       box-shadow: 5px 5px 0 0 white;
+
+      .light & {
+        box-shadow: 5px 5px 0 0 black;
+      }
     }
 
     .info {

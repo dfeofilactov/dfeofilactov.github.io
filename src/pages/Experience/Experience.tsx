@@ -1,10 +1,21 @@
 import React from 'react';
+import { AboutMe, Profile, Skills, Work } from './components';
 import { Page } from '~/layout';
+import './Experience.scss';
 
 const Experience: React.FC = () => {
   return (
     <Page title="Experience" className="experience">
-      <p className="description">Experience content.</p>
+      <div className="cv-wrapper">
+        <Profile />
+        <div className="column left">
+          <Work />
+        </div>
+        <div className="column right">
+          <Skills />
+          <AboutMe />
+        </div>
+      </div>
     </Page>
   );
 };
