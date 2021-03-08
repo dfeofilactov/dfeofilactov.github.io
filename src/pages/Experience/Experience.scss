@@ -11,10 +11,15 @@
   background-color: #10101051;
   box-shadow: 0 0 50px #00000051;
   backdrop-filter: blur(150px);
-  // @include theme(background);
+  @include theme(color);
+
   @include tablet {
     padding-right: 60px;
     padding-left: 60px;
+  }
+
+  p {
+    line-height: 22px;
   }
 }
 
