@@ -1,7 +1,10 @@
+import classNames from 'classnames';
 import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { Theme } from '~/core/models/user';
 import { userPreferences } from '~/core/recoil/atoms';
+import PlanetPng from '~/shared/assets/planet.png';
+import SunPng from '~/shared/assets/bulb.png';
 import './ThemeSwitcher.scss';
 
 const ThemeSwitcher: React.FC = () => {
@@ -18,8 +21,19 @@ const ThemeSwitcher: React.FC = () => {
 
   return (
     <div className="theme-switcher">
-      <button onClick={() => handleSwitch('dark')}>dark theme</button>
-      <button onClick={() => handleSwitch('light')}>light theme</button>
+      <button
+        className={classNames({ active: preferences.theme === 'light' })}
+        onClick={() => handleSwitch('light')}
+      >
+        <div className="light-area" />
+        <img src={SunPng} alt="light" />
+      </button>
+      <button
+        className={classNames({ active: preferences.theme === 'dark' })}
+        onClick={() => handleSwitch('dark')}
+      >
+        <img src={PlanetPng} alt="dark" />
+      </button>
     </div>
   );
 };

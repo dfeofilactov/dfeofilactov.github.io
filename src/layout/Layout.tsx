@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Menu from '~/layout/Menu';
 import LavaSvg from '~/layout/assets/lava';
-import ThemeSwitcher from '~/shared/components/ThemeSwitcher';
 import lavaAnimation from '~/layout/lavaAnimation';
 import './Layout.scss';
 
@@ -14,7 +13,6 @@ const Layout: React.FC = ({ children }) => {
     <div className="layout">
       <Menu />
       <main>{children}</main>
-      <ThemeSwitcher />
       <div className="effect-wrapper">
         <div className="effect" />
       </div>
