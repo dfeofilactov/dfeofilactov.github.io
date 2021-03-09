@@ -5,7 +5,7 @@ import { UserPreferences } from '~/core/models';
 const { persistAtom } = recoilPersist();
 
 const defaultPreferences: UserPreferences = {
-  theme: 'light',
+  theme: null,
 };
 
 export const userPreferences = atom<UserPreferences>({

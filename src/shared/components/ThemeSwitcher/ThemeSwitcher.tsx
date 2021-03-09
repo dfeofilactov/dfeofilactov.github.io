@@ -9,10 +9,18 @@ import './ThemeSwitcher.scss';
 
 const ThemeSwitcher: React.FC = () => {
   const [preferences, setPreferences] = useRecoilState(userPreferences);
+  const { matches } = window.matchMedia('(prefers-color-scheme: dark)');
+
+  useEffect(() => {
+    console.log(preferences.theme);
+    if (preferences.theme) return;
+    if (matches) handleSwitch('dark');
+    else handleSwitch('light');
+  }, [matches]);
 
   useEffect(() => {
     document.documentElement.className = '';
-    document.documentElement.classList.add(preferences.theme);
+    if (preferences.theme) document.documentElement.classList.add(preferences.theme);
   }, [preferences.theme]);
 
   const handleSwitch = (theme: Theme) => {
