@@ -1,0 +1,33 @@
+@use '~/sass/colors' as *;
+
+.Button {
+  @include theme(background, primary);
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: larger;
+  font-family: inherit;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 0 0 white;
+  cursor: pointer;
+
+  &.tiny {
+    padding: 5px 15px;
+    font-size: smaller;
+    box-shadow: 3px 3px 0 0 white;
+  }
+
+  &.secondary {
+    @include theme(background, background, 100);
+    @include theme(color, color);
+  }
+
+  .light & {
+    box-shadow: 5px 5px 0 0 black;
+  }
+
+  .light &.tiny {
+    box-shadow: 3px 3px 0 0 black;
+  }
+}

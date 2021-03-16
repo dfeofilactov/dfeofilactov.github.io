@@ -14,6 +14,7 @@ const Page: React.FC<Props> = ({ children, className, title, transparent }) => {
     <motion.div
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
+      transition={{ ease: 'easeOut' }}
       className={classnames('page', className, { transparent })}
     >
       {title && <h2>{title}</h2>}

@@ -11,7 +11,7 @@ $themes: (
       300: #212121,
     ),
     card: (
-      200: #ffffff11,
+      200: #ffffff,
     ),
     primary: (
       100: #4FD05F,
@@ -30,7 +30,7 @@ $themes: (
       500: #EAEAEA,
     ),
     card: (
-      500: #00000071,
+      500: #26262681,
     ),
     primary: (
       100: #4FD05F,
@@ -46,4 +46,15 @@ $themes: (
       #{$key}: map-get(map-get(map-get($themes, $theme-name), $color), $shade)
     }
   }
+}
+
+:root[data-theme="light"] {
+  --primary-color: #2fc686;
+  --text-color: #0e0e10;
+  --bg-color: #fafafa;
+}
+:root[data-theme="dark"] {
+  --primary-color: #2fc686;
+  --text-color: #ececec;
+  --bg-color: #0e0e10;
 }

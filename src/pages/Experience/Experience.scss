@@ -8,9 +8,9 @@
   padding-left: 20px;
   overflow: auto;
   font-family: 'Montserrat', serif;
-  background-color: #10101051;
+  background-color: #181818e1;
   box-shadow: 0 0 50px #00000051;
-  backdrop-filter: blur(150px);
+  backdrop-filter: blur(50px);
   @include theme(color);
 
   @include tablet {
@@ -29,12 +29,41 @@
   backdrop-filter: blur(50px);
 }
 
+.file {
+  display: flex;
+  align-items: center;
+
+  .download-link {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: smaller;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .download-icon {
+    margin: 5px;
+
+    & > svg {
+      width: 20px;
+      height: 20px;
+      transform: translateY(3px);
+      
+      & path {
+        fill: var(--text-color);
+      }
+    }
+  }
+}
+
 .cv-wrapper {
   display: flex;
   flex-wrap: wrap;
   // gap: 40px;
   box-sizing: border-box;
   width: 100%;
+  margin-top: 40px;
 
   .column {
     width: 100%;
