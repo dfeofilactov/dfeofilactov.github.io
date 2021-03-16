@@ -1,47 +1,45 @@
+.light-area {
+  position: absolute;
+  top: -70%;
+  left: -45%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255,216,0,0.3) 10%, rgba(255,216,0,0.1) 20%, rgba(255,216,0,0.0095) 60%, rgba(0,0,0,0) 90%);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .light & {
+    background: radial-gradient(circle, rgba(50,216,100,0.4) 10%, rgba(50,216,100,0.1) 20%, rgba(50,216,100,0.0095) 60%, rgba(0,0,0,0) 90%) 
+  }
+}
+
 .theme-switcher {
   margin-top: 20px;
 
-  .light-area {
-    position: absolute;
-    top: -70%;
-    left: -45%;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, rgba(255,216,0,0.3) 10%, rgba(255,216,0,0.1) 20%, rgba(255,216,0,0.0095) 60%, rgba(0,0,0,0) 90%);
-    opacity: 0;
+  .theme-icons-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 40px;
+    overflow: hidden;
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      
+      &>img {
+        height: 40px;
+      }
+    }
   }
 
   button {
+    position: relative;
     background: none;
     border: none;
     cursor: pointer;
-    opacity: 0.2;
-    filter: grayscale(1);
-    transition: all 0.2s ease;
-
-    &.active {
-      opacity: 1;
-      filter: grayscale(0);
-
-      & .light-area {
-        opacity: 1;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      border: none;
-      outline: none;
-      opacity: 1;
-      filter: grayscale(0);
-
-      & .light-area {
-        opacity: 1;
-      }
-    }
-  }
-
-  button>img {
-    height: 40px;
   }
 }
