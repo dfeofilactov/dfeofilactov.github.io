@@ -7,6 +7,7 @@ import { MenuItem } from '~/core/models';
 import useButtonClicks from '~/shared/hooks/useButtonClicks';
 import './Menu.scss';
 import ThemeSwitcher from '~/shared/components/ThemeSwitcher';
+import Button from '~/shared/components/Button';
 
 const Menu: React.FC = () => {
   const [clicked, setClicked] = useState(false);
@@ -40,7 +41,7 @@ const Menu: React.FC = () => {
         animate={{ opacity: 1, x: 0 }}
         className="controls"
       >
-        <button onClick={handleClick}>Button</button>
+        <Button onClick={handleClick}>Button</Button>
         {clicked && (
           <motion.div
             initial={{ opacity: 0, y: 40 }}
