@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import Menu from '~/layout/Menu';
-import LavaSvg from '~/layout/assets/lava';
-import lavaAnimation from '~/layout/lavaAnimation';
+import LavaSvg from '~/layout/animations/lava';
+import lavaAnimation from '~/layout/animations/lavaAnimation';
 import './Layout.scss';
 import { userPreferences } from '~/core/recoil/atoms';
 
