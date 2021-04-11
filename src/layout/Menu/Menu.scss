@@ -1,10 +1,13 @@
-@use '~/sass/colors' as *;
-@use '~/sass/config' as *;
+@use '~/scss/colors' as *;
+@use '~/scss/config' as *;
 
 .family-name {
   z-index: -1;
-  font-weight: 100;
-  opacity: 0.2;
+  opacity: 1;
+  @include desktop {
+    font-weight: 100;
+    opacity: 0.2;
+  }
 }
 
 .light .family-name {
@@ -12,12 +15,16 @@
 }
 
 .role {
-  z-index: -1;
-  margin: 5px 0;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
-  @include theme(color, primary);
+  display: none;
+  @include desktop {
+    z-index: -1;
+    display: block;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include theme(color, primary);
+  }
 }
 
 .menu-link {
@@ -48,9 +55,9 @@ menu {
   flex-grow: 1;
   box-sizing: border-box;
   margin: 0;
-  padding-top: 80px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include desktop {
     width: 30%;
@@ -62,7 +69,12 @@ menu {
   h1 {
     margin: 0;
     font-weight: 900;
+    font-size: 20px;
     line-height: 32px;
+
+    @include desktop {
+      font-size: 30px;
+    }
   }
 
   ol {
@@ -85,22 +97,6 @@ menu {
 
   .controls {
     margin-top: 40px;
-
-    // button {
-    //   @include theme(background, primary);
-    //   padding: 10px 30px;
-    //   font-weight: bold;
-    //   font-size: larger;
-    //   font-family: inherit;
-    //   text-transform: uppercase;
-    //   border: none;
-    //   outline: none;
-    //   box-shadow: 5px 5px 0 0 white;
-
-    //   .light & {
-    //     box-shadow: 5px 5px 0 0 black;
-    //   }
-    // }
 
     .info {
       margin-top: 30px;

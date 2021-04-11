@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import Layout from '~/layout/Layout';
 import Routes from '~/pages/Routes';
-import '~/sass/main.scss';
+import '~/scss/main.scss';
 
 const App: React.FC = () => {
   return (
