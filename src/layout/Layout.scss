@@ -1,4 +1,4 @@
-@use '~/sass/config' as *;
+@use '~/scss/config' as *;
 
 .layout {
   display: flex;
@@ -36,6 +36,7 @@ main {
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
+  overflow: hidden;
 
   .effect {
     height: 100vh;

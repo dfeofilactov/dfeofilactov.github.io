@@ -1,5 +1,5 @@
-@use '~/sass/colors' as *;
-@use '~/sass/config' as *;
+@use '~/scss/colors' as *;
+@use '~/scss/config' as *;
 
 .experience {
   display: flex;
@@ -63,7 +63,11 @@
   // gap: 40px;
   box-sizing: border-box;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
 
   .column {
     width: 100%;

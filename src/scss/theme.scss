@@ -49,3 +49,24 @@ $contrast-colors: (
 @mixin contrast($background: 'light', $type: 'primary') {
   color: contrast($background, $type)
 }
+
+$primary: #2fc686;
+$secondary: #6ad1c5;
+$default: #222224;
+$text: #ececec;
+$error: #d4392e;
+
+$box_shadow_1: 0 0 30px 1px #00000048;
+
+:root[data-theme="light"] {
+  --primary-color: #2fc686;
+  --text-color: #0e0e10;
+  --bg-color: #fafafa;
+  --scroller-color: #eaeaea;
+}
+:root[data-theme="dark"] {
+  --primary-color: #2fc686;
+  --text-color: #ececec;
+  --bg-color: #0e0e10;
+  --scroller-color: #222224;
+}

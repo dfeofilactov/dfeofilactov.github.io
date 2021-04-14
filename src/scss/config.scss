@@ -17,3 +17,12 @@
 @mixin desktop-l {
   @media (min-width: 1800px) { @content; }
 }
+
+$fontGiant: 64px;
+$fontExtraLarge: 48px;
+$fontLarger: 32px;
+$fontLarge: 24px;
+$fontMedium: 18px;
+$fontDefault: 14px;
+$fontSmall: 12px;
+$fontTiny: 10px;
