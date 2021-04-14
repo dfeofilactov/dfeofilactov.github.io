@@ -13,7 +13,6 @@ const screens = new Map<ScreenType, Size>([
 
 const useScreen = (screen: ScreenType): boolean => {
   const [width, setWidth] = useState<number | null>(null);
-  console.log('🚀 > width', width);
 
   useEffect(() => {
     const handleResize = () => {

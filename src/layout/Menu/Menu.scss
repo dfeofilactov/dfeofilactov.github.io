@@ -51,13 +51,21 @@
 
 menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
   margin: 0;
   padding-top: 40px;
   padding-right: 20px;
   padding-left: 20px;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 
   @include desktop {
     width: 30%;
@@ -70,7 +78,7 @@ menu {
     margin: 0;
     font-weight: 900;
     font-size: 20px;
-    line-height: 32px;
+    line-height: 20px;
 
     @include desktop {
       font-size: 30px;
@@ -122,6 +130,46 @@ menu {
       border-bottom: 1px solid white;
       outline: none;
     }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-items {
+  display: none;
+
+  &.opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 30px;
+    background-color: var(--bg-color);
+
+    button {
+      margin: 15px 0;
+      font-weight: 900;
+      font-size: $fontLarge;
+    }
+  }
+}
+
+.mobile-menu-button {
+  z-index: 999;
+  font-size: 40px;
+  background: none;
+
+  @include tablet {
+    display: none;
   }
 }
 

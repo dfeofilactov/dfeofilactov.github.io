@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import MobileMenu from './MobileMenu';
 import { menuDescription } from '~/core/meta';
 import { MenuItem } from '~/core/models';
 import useButtonClicks from '~/shared/hooks/useButtonClicks';
 import ThemeSwitcher from '~/shared/components/ThemeSwitcher';
 import Button from '~/shared/components/Button';
-import './Menu.scss';
 import useScreen from '~/shared/hooks/useScreen';
+import './Menu.scss';
 
 const Menu: React.FC = () => {
   const [clicked, setClicked] = useState(false);
@@ -25,6 +26,7 @@ const Menu: React.FC = () => {
         Denis <span className="family-name">Feofilactov</span>
       </h1>
       <p className="role">React frontend developer</p>
+      {isPhone && <MobileMenu />}
       {!isPhone && (
         <>
           <ThemeSwitcher />

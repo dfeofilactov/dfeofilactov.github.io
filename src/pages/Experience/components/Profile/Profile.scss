@@ -1,18 +1,29 @@
 @use '~/scss/colors' as *;
+@use '~/scss/config' as *;
 
 .profile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 20px;
   padding: 0;
   font-size: 26px;
 
   h3 {
+    display: none;
     margin-bottom: 0;
     font-weight: 700;
     line-height: 30px;
+    font-size: 24px;
     text-transform: uppercase;
+  }
+
+  @include tablet {
+    flex-direction: row;
+
+    h3 {
+      display: block;
+    }
   }
 }
 
@@ -33,6 +44,11 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 #work-position {
