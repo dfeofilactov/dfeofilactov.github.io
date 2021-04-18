@@ -27,6 +27,7 @@ const Experience: React.FC = () => {
           initial="hide"
           animate="show"
           variants={blockVariants}
+          style={{ width: '100%' }}
           transition={{ delay: DELAY }}
         >
           <Profile />
